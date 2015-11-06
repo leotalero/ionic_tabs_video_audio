@@ -1,0 +1,68 @@
+<ion-view view-title="Curiosidades">
+  <ion-content>
+    <ion-list>
+      <amp-youtube
+      data-videoid="bNpZDJ_jP0A"
+      layout="responsive"
+      width="480" height="270">
+      </amp-youtube>
+
+
+  <ion-item>
+    <p>  audio interno <p>
+  <audio controls style="width: auto;">
+
+       <source src="sounds/UEFA_Champions_League.mp3" type="audio/ogg">
+       <source src="sounds/UEFA_Champions_League.mp3" type="audio/mpeg">
+
+       Your browser does not support the audio tag.
+
+</audio>
+</ion-item>
+<ion-item>
+  <p>  audio 2 con link <p>
+<audio controls style="width: auto;">
+
+     <source src="http://www.fcsongs.com/themesongs/UEFA%20Champions%20League%20Theme.mp3" type="audio/ogg">
+     <source src="http://www.fcsongs.com/themesongs/UEFA%20Champions%20League%20Theme.mp3" type="audio/mpeg">
+
+     Your browser does not support the audio tag.
+
+</audio>
+</ion-item>
+
+<ion-item>
+  <p>  audio 3 AMP <p>
+    <amp-audio style="width: auto;" src="https://ionic-audio.s3.amazonaws.com/Roxane.mp3">
+      <div fallback>
+        <p>Your browser doesn’t support HTML5 audio</p>
+      </div>
+      <source type="audio/mpeg" src="https://ionic-audio.s3.amazonaws.com/Roxane.mp3">
+      <source type="audio/ogg" src="https://ionic-audio.s3.amazonaws.com/Roxane.mp3">
+    </amp-audio>
+</ion-item>
+
+<div class="card">
+    <div class="item item-divider">
+        <ion-audio-progress-bar display-time display-info></ion-audio-progress-bar>
+    </div>
+</div>
+
+</ion-item>
+
+
+    </ion-list>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
